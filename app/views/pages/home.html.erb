@@ -1,4 +1,11 @@
 <div class="jumbotron center">
 	<h1>Welcome to Biteplan</h1>
-	<p>Check out my other web <%= link_to "IT Fix Direct", "http://itfixdirect.co.uk", class: "btn btn-danger" %></p>
+<% if user_signed_in? %>
+Welcome to the member area!
+<% else %>
+<p>
+	<%= link_to "Log in", new_user_session_path, class: "btn btn-default active" %>
+	<%= link_to "Sign up", new_user_registration_path, class: "btn btn-danger active" %>
+</p>
+<% end %>
 </div>
