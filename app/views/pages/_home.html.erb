@@ -1,11 +1,10 @@
+
 <div class="jumbotron center">
 	<h1>Welcome to Biteplan</h1>
-<% if user_signed_in? %>
-Welcome to the members area!
-<% else %>
+
 <p>
 	<%= link_to "Log in", new_user_session_path, class: "btn btn-default active" %>
 	<%= link_to "Sign up", new_user_registration_path, class: "btn btn-danger active" %>
 </p>
-<% end %>
+
 </div>
